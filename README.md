@@ -1,4 +1,4 @@
-BaseMVC4EF5WebSite
+SignalR Demo for Hubs
 ==================
 
-Base MVC4 EF5 WebSite
+This was build off the Base MVC4 EF5 WebSite
