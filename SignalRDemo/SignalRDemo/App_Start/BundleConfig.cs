@@ -24,7 +24,8 @@ namespace SignalRDemo
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquerySignalR").Include("~/Scripts/jquery.signalR*"));
+            bundles.Add(new ScriptBundle("~/bundles/jquerySignalR")
+                .Include("~/Scripts/jquery.signalR*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 

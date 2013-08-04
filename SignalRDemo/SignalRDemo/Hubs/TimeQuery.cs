@@ -8,15 +8,19 @@ using Timer = System.Timers.Timer;
 
 namespace SignalRDemo.Hubs
 {
-    public class Chat : Hub
+    public class TimeQuery : Hub
     {
         static string messageToSend = DateTime.Now.ToString();
-        Timer t = new Timer(500);
+        Timer t;
 
-        public void SayHello()
+        public void StartTimer()
         {
-            t.Elapsed +=t_Elapsed;
-            t.Start();
+            if (t == null)
+            {
+                t = new Timer(500);
+                t.Elapsed += t_Elapsed;
+                t.Start();
+            }
         }
 
         private void t_Elapsed(object sender, ElapsedEventArgs e)

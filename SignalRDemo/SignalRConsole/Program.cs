@@ -13,7 +13,7 @@ namespace SignalRConsole
         static void Main(string[] args)
         {
             HubConnection hub = new HubConnection("http://localhost:64277");
-            IHubProxy proxy = hub.CreateHubProxy("Chat");
+            IHubProxy proxy = hub.CreateHubProxy("TimeQuery");
 
             proxy.On("addMessage", message =>
             {
@@ -21,7 +21,7 @@ namespace SignalRConsole
             });
 
             hub.Start().Wait();
-            proxy.Invoke("SayHello");
+            proxy.Invoke("StartTimer");
 
             string line = null;
             while ((line = Console.ReadLine()) != null)
